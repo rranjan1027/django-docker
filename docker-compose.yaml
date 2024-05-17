@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+#      - sqlite_data:/app/db
+#    environment:
+#      - DJANGO_SETTINGS_MODULE=GeoLocation.settings
+#      - SECRET_KEY=3$113z6pjly(fo8lyd%tolz+ns987rg-=i73&m8)zx5hzcg76m
+
+#volumes:
+#  sqlite_data:

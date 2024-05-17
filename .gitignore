@@ -1,0 +1,14 @@
+# Ignore compiled Python files
+*.pyc
+
+# Ignore Django migration files
+**/migrations/
+
+# Ignore the virtual environment directory
+venv/
+
+# Ignore local SQLite database file
+db.sqlite3
+
+# Ignore Docker related files
+docker-compose.override.yml

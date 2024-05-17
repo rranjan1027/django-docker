@@ -1,0 +1,12 @@
+# Exclude Django related files not needed for Docker
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+*.log
+
+# Exclude Docker related files not needed for the container build
+.dockerignore
+docker-compose.yml
+docker-compose.override.yml
