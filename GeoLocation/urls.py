@@ -16,14 +16,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from geoapp.views import TokenObtainView, TokenRefreshView, AdminDataView, verify_selfie
+from geoapp.views import TokenObtainView, TokenRefreshView, AdminDataView
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/token/', TokenObtainView.as_view(), name='token_obtain'),
     path('api/refresh_token/', TokenRefreshView.as_view(), name='refresh_token'),
-    path('api/verify/', verify_selfie, name='verify_selfie'),
+    # path('api/verify/', verify_selfie, name='verify_selfie'),
     path('api/AdminDataView', AdminDataView.as_view(), name='AdminDataView'),
     path('api-docs/', include('geoapp.swagger'))
 ]

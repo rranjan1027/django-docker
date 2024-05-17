@@ -150,14 +150,9 @@ class AdminDataView(ListAPIView):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
-    def delete(self):
-        return Response({}, status=status.HTTP_200_OK)
-
-
-
-def verify_selfie(request):
-    if request.method == 'POST' and request.FILES['image']:
-        return render(request, 'geoapp/verify_selfie.html')
+# def verify_selfie(request):
+#     if request.method == 'POST' and request.FILES['image']:
+#         return render(request, 'geoapp/verify_selfie.html')
 #         # Load the uploaded image
 #         if 1: #try:
 #             uploaded_image = request.FILES['image'].read()
